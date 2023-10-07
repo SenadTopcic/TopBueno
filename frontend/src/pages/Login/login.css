@@ -1,59 +1,127 @@
 /* Login.css */
 
+.loginScreen {
+  display: flex;
+  flex-direction: column; 
+  height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white; 
+  padding: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Prilagodite visinu po potrebi */
+  background: linear-gradient(90deg, rgba(15, 30, 15, 0.203) 0%, rgba(51, 51, 51, 1) 50%, rgba(22, 70, 23, 0.148) 100%); /* Prilagodite boju footera po želji */
+  color: white; /* Prilagodite boju teksta */
+}
+
 .container-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  flex-grow: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
-  .login-form {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #7595ee;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #5d745a41;
-  }
+.login-form {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #7595ee;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #5d745a41;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-form {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.button-login-form {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button-form:hover {
+  background-color: #0056b3;
+}
   
-  .label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .input-form {
+.a-form {
+  text-decoration: none;
+  color: #ff000d;
+}
+
+.a-form:hover {
+  color: azure;
+}
+@media (max-width: 968px) {
+  .image-container-play img {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
+    height: auto;
   }
-  
-  .button-login-form {
+}
+
+/* Media upit za mobilne ekrane sa širinom manjom od 600px */
+@media (max-width: 600px) {
+
+  .image-container-play img {
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .button-form:hover {
-    background-color: #0056b3;
-  }
-  
-  .a-form {
-    text-decoration: none;
-    color: #ff000d;
-  }
-  
-  .a-form:hover {
-    color: azure;
+    height: auto;
   }
 
+  .loginScreen {
+    /* Za male ekrane, promenite fleksni prikaz na kolonu */
+    flex-direction: column;
+  }
+
+  .container-form {
+    /* Za male ekrane, uklonite centriranje i smanjite visinu */
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .login-form {
+    /* Za male ekrane, smanjite širinu i uklonite fiksni padding */
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Možete dodati dodatne stilove za elemente na malim ekranima */
+  .label {
+    font-size: 14px;
+  }
+
+  .input-form {
+    font-size: 14px;
+  }
+
+  .button-login-form {
+    font-size: 16px;
+  }
+}
 

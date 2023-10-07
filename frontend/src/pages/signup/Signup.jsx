@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
 import './Signup.css'
 import SignupValidation from '../../utils/SignupValidation'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 const Signup = () => {
   const [values, setValues] = useState({
@@ -20,7 +22,8 @@ const Signup = () => {
     setErrors(SignupValidation(values))
   }
   return (
-    <div>
+    <div className='loginScreen'>
+      <Header className="header" />
 			<div className='container-form'>
 					<form className="signup-form" action="" onSubmit={handleSubmit}>
             <div>
@@ -65,6 +68,7 @@ const Signup = () => {
            </div>
 					</form>
 			</div>
+      <div className="footer"><Footer className="footer"/></div>
     </div>
   )
 }
